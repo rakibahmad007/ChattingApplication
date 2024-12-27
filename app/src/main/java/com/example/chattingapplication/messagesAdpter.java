@@ -2,8 +2,8 @@ package com.example.chattingapplication;
 
 
 
-import static com.example.chatapplication.chatwindo.reciverIImg;
-import static com.example.chatapplication.chatwindo.senderImg;
+import static com.example.chattingapplication.chatwindo.reciverIImg;
+import static com.example.chattingapplication.chatwindo.senderImg;
 
 import android.app.AlertDialog;
 import android.content.Context;
