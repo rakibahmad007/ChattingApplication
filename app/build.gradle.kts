@@ -44,7 +44,8 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     //Firebase database
     implementation("com.google.firebase:firebase-database")
-
+    //firebase storage
+    implementation("com.google.firebase:firebase-storage")
 
     // Third-party libraries
     implementation("com.intuit.sdp:sdp-android:1.1.0") // Scaled pixels support
@@ -60,4 +61,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    //Picaso library
+    implementation("com.squareup.picasso:picasso:2.8")
+
 }
