@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
