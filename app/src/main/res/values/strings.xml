@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ChattingApplication</string>
+    <string name="create_new">Create New</string>
+    <string name="account">Account</string>
+    <string name="username">UserName</string>
+    <string name="re_enter_password">Rr-Enter Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">login!</string>
+    <string name="signup">signup</string>
 </resources>
