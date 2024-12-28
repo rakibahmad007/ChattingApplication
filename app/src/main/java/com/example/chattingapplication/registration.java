@@ -32,7 +32,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class registration extends AppCompatActivity {
     TextView loginbut;
-    EditText rg_username, rg_email , rg_password, rg_repassword;
+    EditText rg_username, rg_email, rg_password, rg_repassword;
     Button rg_signup;
     CircleImageView rg_profileImg;
     FirebaseAuth auth;
@@ -102,7 +102,13 @@ public class registration extends AppCompatActivity {
                                 String id = task.getResult().getUser().getUid();
                                 DatabaseReference reference = database.getReference().child("user").child(id);
                                 StorageReference storageReference = storage.getReference().child("Upload").child(id);
-
+                                progressDialog.show();
+                                Intent intent = new Intent(registration.this,MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                                Toast.makeText(registration.this, "Registration is completed successfully!", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(registration.this, MainActivity.class));
+                                finish();
                                 if (imageURI!=null){
                                     storageReference.putFile(imageURI).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                                         @Override
@@ -118,9 +124,10 @@ public class registration extends AppCompatActivity {
                                                             public void onComplete(@NonNull Task<Void> task) {
                                                                 if (task.isSuccessful()){
                                                                     progressDialog.show();
-                                                                    Intent intent = new Intent(registration.this,MainActivity.class);
-                                                                    startActivity(intent);
+                                                                    Toast.makeText(registration.this, "Registration is completed successfully!", Toast.LENGTH_SHORT).show();
+                                                                    startActivity(new Intent(registration.this, MainActivity.class));
                                                                     finish();
+
                                                                 }else {
                                                                     Toast.makeText(registration.this, "Error in creating the user", Toast.LENGTH_SHORT).show();
                                                                 }
@@ -182,3 +189,5 @@ public class registration extends AppCompatActivity {
         }
     }
 }
+
+
