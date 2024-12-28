@@ -46,6 +46,8 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     //firebase storage
     implementation("com.google.firebase:firebase-storage")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
+
 
     // Third-party libraries
     implementation("com.intuit.sdp:sdp-android:1.1.0") // Scaled pixels support
