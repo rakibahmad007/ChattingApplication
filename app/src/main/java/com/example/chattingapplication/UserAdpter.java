@@ -55,7 +55,9 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
 
     @Override
     public int getItemCount() {
-        return usersArrayList.size();
+//        return usersArrayList.size();
+        return usersArrayList != null ? usersArrayList.size() : 0; // Handle null case
+
     }
 
     public class viewholder extends RecyclerView.ViewHolder {
