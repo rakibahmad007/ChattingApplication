@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity{
     FirebaseDatabase database;
     ArrayList<Users> usersArrayList;
     ImageView imglogout;
-    ImageView cumbut,setbut;
+    ImageView cumbut,setbut,chatMsg;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity{
         auth = FirebaseAuth.getInstance();
         cumbut = findViewById(R.id.camBut);
         setbut = findViewById(R.id.settingBut);
+        chatMsg = findViewById(R.id.msgicon);
 
         DatabaseReference reference = database.getReference().child("user");
 
@@ -104,6 +105,14 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, setting.class);
+                startActivity(intent);
+            }
+        });
+
+        chatMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, chatwindo.class);
                 startActivity(intent);
             }
         });
